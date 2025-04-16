@@ -39,10 +39,11 @@ app.use("/api/payment",paymentRouter)
 app.use('/api/admin',adminRoutes);
 
 //mongodb.connect
-mongoose.connect("mongodb+srv://rs20150190128:9iPPwsMvRnsno5KY@cluster0.uma1rih.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",{
-    dbName:"project44"
-}).then(()=>console.log("MongoDb Connected Succssfylly..!")).catch(()=>console.log(error))
- 
+mongoose.connect("mongodb+srv://rs20150190128:9iPPwsMvRnsno5KY@cluster0.uma1rih.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+    dbName: "project44",
+})
+.then(() => console.log("MongoDB Connected Successfully..!"))
+.catch((error) => console.log("MongoDB Connection Error:", error));
 //home route 
 app.get("/",(req,res)=>res.json({message:"This is home route"}))
 
