@@ -12,7 +12,7 @@ import adminRoutes from './Routes/admin.js';
 const port = 5000
 
 app.use(cors({
-    origin:true,
+    origin:"https://vastrahaa-fronted-8s2u.vercel.app",
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))
